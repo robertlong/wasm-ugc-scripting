@@ -1,0 +1,11 @@
+{
+  "name": "rotate-cube",
+  "private": true,
+  "scripts": {
+    "build": "asc --target release",
+    "build:debug": "asc --target debug"
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.19.22"
+  }
+}

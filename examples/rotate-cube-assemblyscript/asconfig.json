@@ -1,0 +1,31 @@
+{
+  "entries": [
+    "./src/main.ts"
+  ],
+  "options": {
+    "binaryFile": "../../public/rotate-cube.wasm",
+    "runtime": "incremental",
+    "importMemory": true,
+    "initialMemory": 1024,
+    "maximumMemory": 1024,
+    "noExportMemory": true,
+    "zeroFilledMemory": true,
+    "memoryBase": 6560,
+    "use": [
+      "trace="
+    ]
+  },
+  "targets": {
+    "release": {
+      "optimizeLevel": 3,
+      "shrinkLevel": 0,
+      "noAssert": true,
+      "use": "abort="
+    },
+    "debug": {
+      "debug": true,
+      "sourceMap": "../../public/rotate-cube.wasm.map",
+      "use": "abort=src/world/abortHandler"
+    }
+  }
+}

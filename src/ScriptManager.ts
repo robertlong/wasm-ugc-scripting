@@ -1,4 +1,4 @@
-import { Object3D, Vector3 } from "three";
+import { Object3D } from "three";
 
 const textDecoder = new TextDecoder();
 
@@ -36,9 +36,6 @@ export default class ScriptManager {
   }
 
   async load(scriptUrl: string) {
-    const position = new Float32Array(this.memory.buffer, 0, 4);
-    position.set([1, 2, 3, 4]);
-
     const { instance } = await WebAssembly.instantiateStreaming(fetch(scriptUrl), {
       env: {
         memory: this.memory,
